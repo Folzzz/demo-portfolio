@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'button';
 
 
 * {
@@ -110,6 +111,25 @@ main {
         background: lighten($color: $primary-color, $amount: 5);
         padding: 0.5em;
         border-bottom: 5px solid $secondary-color;
+    }
+}
+
+//work/project
+.projects {
+    display: grid;
+    grid-gap: 0.7em;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    img {
+        width: 100%;
+        border: 3px solid #fff;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
     }
 }
 

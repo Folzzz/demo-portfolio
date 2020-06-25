@@ -1,11 +1,15 @@
 //for xl screen
 @include mediaXl {
-    
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 //for lg screens
 @include mediaLg {
-
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 //tablets and small laptops
@@ -35,6 +39,8 @@
         height: 75vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
+        display: block;
+        text-align: center;
     }
 
     .menu-branding {
@@ -57,6 +63,10 @@
         'job3';
         grid-template-columns: 1fr;
     }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 //mobile phone
@@ -69,5 +79,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
     }
 }
